@@ -5,14 +5,13 @@ export default defineStackbitConfig({
   contentSources: [
     new GitContentSource({
       rootPath: __dirname,
-      // Tell Netlify to look at your top-level project directory
-      contentDirs: ["."], 
+      contentDirs: ["content"],
       models: [
         {
-          name: "HomePage",
+          name: "Page",
           type: "page",
-          urlPath: "/",              // Maps directly to your homepage (yourwebsite.com/)
-          filePath: "index.html",    // Points directly to your index.html file
+          urlPath: "/",
+          filePath: "content/home.json",
           fields: [
             { name: "title", type: "string", required: true }
           ]
